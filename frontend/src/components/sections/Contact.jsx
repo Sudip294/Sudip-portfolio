@@ -34,7 +34,7 @@ export function Contact() {
     try {
       // BACKEND READY: This will connect to your Node.js + Express + Nodemailer backend
       // Replace with your actual API endpoint
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch('https://sudip-portfolio.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -64,10 +64,10 @@ export function Experience() {
                     <CardHeader>
                       <CardTitle className="text-lg">{exp.title}</CardTitle>
                       <div className="flex flex-col gap-1 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-1">
+                        {/* <div className="flex items-center gap-1">
                           <Building className="h-4 w-4" />
                           {exp.company}
-                        </div>
+                        </div> */}
                         <div className="flex items-center gap-1">
                           <Calendar className="h-4 w-4" />
                           {exp.period}

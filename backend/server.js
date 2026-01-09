@@ -8,30 +8,40 @@ app.use(cors());
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // or your email provider
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS, // Use an "App Password", not your login password
-  },
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // Use SSL
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS, // Use an "App Password", not your login password
+    },
+    tls: {
+        // This helps if the server is on a shared network like Render
+        rejectUnauthorized: false
+    },
+    connectionTimeout: 20000, // Increase to 20 seconds
 });
 
 app.post('/api/contact', (req, res) => {
-  const { name, email, subject, message } = req.body;
+    const { name, email, subject, message } = req.body;
 
-  const mailOptions = {
-    from: email,
-    to: process.env.EMAIL_USER, 
-    subject: `New Portfolio Message: ${subject}`,
-    text: `From: ${name} (${email})\n\nMessage:\n${message}`,
-  };
+    const mailOptions = {
+       // IMPORTANT: The 'from' MUST be your own Gmail address (the one in env)
+        from: process.env.EMAIL_USER, 
+        // This makes it so when you click 'Reply' in your inbox, it goes to the user
+        replyTo: email, 
+        to: process.env.EMAIL_USER,
+        subject: `Portfolio: ${subject || 'New Message'}`,
+        text: `You received a message from ${name} (${email}):\n\n${message}`,
+    };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-      return res.status(500).send('Error sending email');
-    }
-    res.status(200).send('Email sent successfully');
-  });
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+            return res.status(500).send('Error sending email');
+        }
+        res.status(200).send('Email sent successfully', info.response);
+    });
 });
 
 const PORT = process.env.PORT || 5000;

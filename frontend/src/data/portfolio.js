@@ -9,7 +9,7 @@ export const portfolioData = {
     email: "dipalbag123@gmail.com",
     phone: "+91 8668924123",
     location: "Nallasopara,Maharashtra,IN",
-    profileImage: "../src/assets/profile photo.jpg", // Update this path
+    profileImage: "/assets/profile photo.jpg", // Update this path
   },
 
   // EDIT THIS: Your social links
@@ -101,7 +101,7 @@ export const portfolioData = {
       id: 1,
       title: "TravelBooker",
       description: "A responsive travel booking frontend application built using React.js. The project focuses on creating reusable components, clean UI design, and smooth user experience. It showcases destination listings and a modern layout, deployed using Vercel. This project helped strengthen my understanding of React component structure and frontend best practices.",
-      image: "/src/assets/travetbooker ss.png?auto=compress&cs=tinysrgb&w=800",
+      image: "/assets/travetbooker ss.png",
       technologies: ["vite + React js", "Bootstrap", "Chart.js", "react-hot-toast" ,"PWA"],
       githubUrl: "https://github.com/Sudip294/travelBooker-project",
       liveUrl: "https://travel-booker-project.vercel.app/",
@@ -111,7 +111,7 @@ export const portfolioData = {
       id: 2,
       title: "CalcMaster",
       description: "Developed a responsive web application offering essential tools such as a standardcalculator, BMI index calculator, and age calculator. Built using HTML, CSS, and JavaScript, and deployed on Vercel, the platform ensures a user-friendly and efficient experience across devices.",
-      image: "/src/assets/calcmaster ss.jpg?auto=compress&cs=tinysrgb&w=800",
+      image: "/assets/calcmaster ss.jpg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["HTML", "CSS", "JavaScript", "BootStrap","PWA"],
       githubUrl: " https://github.com/Sudip294/CalcMaster-Project",
       liveUrl: " https://calc-master-project.vercel.app/",
@@ -121,7 +121,7 @@ export const portfolioData = {
       id: 3,
       title: "EatsExpress",
       description: "Developed a comprehensive website for EatsExpress, a modern food delivery service in Mumbai, featuring a diverse range of culinary options and a responsive user interface.",
-      image: "/src/assets/eatsexpress.png?auto=compress&cs=tinysrgb&w=800",
+      image: "/assets/eatsexpress.png",
       technologies: ["HTML", "CSS", "Bootstrap"],
       githubUrl: "https://github.com/Sudip294/OnlineFoodDelivery",
       liveUrl: "https://eats-express28.vercel.app/",

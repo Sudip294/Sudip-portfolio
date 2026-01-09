@@ -9,14 +9,16 @@ app.use(express.json());
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, // Use SSL
+    port: 587, // Try 587 first with secure: false
+  secure: false,
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS, // Use an "App Password", not your login password
     },
-   
-    connectionTimeout: 20000, // Increase to 20 seconds
+   tls: {
+    rejectUnauthorized: false
+  },
+    connectionTimeout: 40000, // Increase to 20 seconds
 });
 
 app.post('/api/contact', (req, res) => {

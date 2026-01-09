@@ -9,7 +9,7 @@ export const portfolioData = {
     email: "dipalbag123@gmail.com",
     phone: "+91 8668924123",
     location: "Nallasopara,Maharashtra,IN",
-    profileImage: "./src/assets/profile photo.jpg", // Update this path
+    profileImage: "../src/assets/profile photo.jpg", // Update this path
   },
 
   // EDIT THIS: Your social links

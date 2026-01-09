@@ -15,10 +15,7 @@ const transporter = nodemailer.createTransport({
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS, // Use an "App Password", not your login password
     },
-    tls: {
-        // This helps if the server is on a shared network like Render
-        rejectUnauthorized: false
-    },
+   
     connectionTimeout: 20000, // Increase to 20 seconds
 });
 

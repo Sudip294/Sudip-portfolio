@@ -18,6 +18,7 @@ app.post("/api/contact", async (req, res) => {
       to: [process.env.EMAIL_USER],
       subject: `New Portfolio Message: ${subject}`,
       html: `
+        <p><b>Subject:</b> ${subject}</p>
         <p><b>Name:</b> ${name}</p>
         <p><b>Email:</b> ${email}</p>
         <p>${message}</p>

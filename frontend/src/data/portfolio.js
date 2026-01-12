@@ -65,7 +65,7 @@ export const portfolioData = {
       institution: "Tilak Maharashtra University, Pune",
       year: "2021 - 2024",
       grade:"CGPA : 7.72",
-      description: "Focused on computer applications, programming fundamentals, web development, and software development con."
+      description: "Focused on computer applications, programming fundamentals, web development, and software development."
     },
     {
       degree: "HSC (Class XII)",

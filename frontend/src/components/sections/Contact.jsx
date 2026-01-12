@@ -34,7 +34,7 @@ export function Contact() {
 
     try {
       const response = await fetch(
-        "https://sudip-portfolio-backend.onrender.com/api/contact",
+        "https://sudip-portfolio.onrender.com/api/contact",
         {
           method: "POST",
           headers: {

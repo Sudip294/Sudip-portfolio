@@ -15,23 +15,21 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.post('/api/contact', (req, res) => {
+app.post('/api/contact', async (req, res) => {
   const { name, email, subject, message } = req.body;
 
-  const mailOptions = {
-    from: email,
-    to: process.env.EMAIL_USER, 
-    subject: `New Portfolio Message: ${subject}`,
-    text: `From: ${name} (${email})\n\nMessage:\n${message}`,
-  };
+  res.status(200).json({ success: true, message: "Message received" });
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-      return res.status(500).send('Error sending email');
-    }
-    res.status(200).send('Email sent successfully');
-  });
+  try {
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER,
+      subject: `New Portfolio Message: ${subject}`,
+      text: `From: ${name} (${email})\n\nMessage:\n${message}`,
+    });
+  } catch (err) {
+    console.error("Mail error:", err);
+  }
 });
 
 const PORT = process.env.PORT || 5000;

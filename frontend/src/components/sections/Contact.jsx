@@ -30,37 +30,35 @@ export function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    try {
-      // BACKEND READY: This will connect to your Node.js + Express + Nodemailer backend
-      // Replace with your actual API endpoint
-      const response = await fetch('https://sudip-portfolio.onrender.com/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    setSubmitStatus(null);
 
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        setSubmitStatus('error');
+    try {
+      const response = await fetch(
+        "https://sudip-portfolio.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error("Failed to send");
       }
+
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-      console.log('Contact form ready for backend integration');
-      // For demo purposes, simulate success
-      setTimeout(() => {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setIsSubmitting(false);
-      }, 1000);
-      return;
+      console.error("Contact form error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus(null), 5000);
     }
-    
-    setIsSubmitting(false);
-    setTimeout(() => setSubmitStatus(null), 5000);
   };
 
   // DO NOT CHANGE: Animation variants
@@ -139,7 +137,7 @@ export function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            I'm always interested in new opportunities and collaborations. 
+            I'm always interested in new opportunities and collaborations.
             Let's discuss how we can work together!
           </p>
         </motion.div>
@@ -244,7 +242,7 @@ export function Contact() {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium mb-2">
                       Subject
@@ -258,7 +256,7 @@ export function Contact() {
                       placeholder="What's this about?"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
                       Message *
@@ -279,11 +277,10 @@ export function Contact() {
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className={`flex items-center space-x-2 p-3 rounded-md ${
-                        submitStatus === 'success'
+                      className={`flex items-center space-x-2 p-3 rounded-md ${submitStatus === 'success'
                           ? 'bg-green-100 text-green-700 border border-green-200'
                           : 'bg-red-100 text-red-700 border border-red-200'
-                      }`}
+                        }`}
                     >
                       {submitStatus === 'success' ? (
                         <CheckCircle className="h-5 w-5" />

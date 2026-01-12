@@ -14,7 +14,7 @@ app.post("/api/contact", async (req, res) => {
 
   try {
     await resend.emails.send({
-      from: "Portfolio <onboarding@resend.dev>",
+      from: "Sudip Portfolio <onboarding@resend.dev>",
       to: [process.env.EMAIL_USER],
       subject: `New Portfolio Message: ${subject}`,
       html: `

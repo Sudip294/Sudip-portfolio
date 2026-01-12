@@ -14,24 +14,23 @@ app.post("/api/contact", async (req, res) => {
 
   try {
     await resend.emails.send({
-      from: "Portfolio <onboarding@resend.dev>", // default sender
+      from: "Portfolio <onboarding@resend.dev>",
       to: [process.env.EMAIL_USER],
       subject: `New Portfolio Message: ${subject}`,
       html: `
-        <h3>New Contact Message</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
         <p>${message}</p>
       `,
     });
 
-    res.status(200).json({ success: true, message: "Email sent" });
-  } catch (error) {
-    console.error("Resend error:", error);
-    res.status(500).json({ success: false, message: "Email failed" });
+    res.status(200).json({ success: true });
+  } catch (err) {
+    console.error("Resend error:", err);
+    res.status(500).json({ success: false });
   }
 });
 
-const PORT = process.env.PORT || 10000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(process.env.PORT || 10000, () =>
+  console.log("Server running")
+);

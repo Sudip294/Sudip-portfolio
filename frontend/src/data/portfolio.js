@@ -99,6 +99,26 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
+      title: "NodeKit",
+      description: "Developed a secure Node.js and MongoDB backend for a privacy-centric todo application. Implemented JWT authentication, bcrypt hashing, and a unique secondary privacy lock system for sensitive tasks, alongside integrated email OTP services via Resend.",
+      image: "/assets/nodekit ss.png",
+      technologies: ["vite + React js", "Tailwind css", "react icons", "react-hot-toast" ,"PWA","Basic MERN CRUD","Resend"],
+      githubUrl: "https://github.com/Sudip294/Nodekit",
+      liveUrl: "https://nodekit.vercel.app/",
+      featured: true
+    },
+     {
+      id: 2,
+      title: "Sudip Portfolio",
+      description: "Developed a responsive personal portfolio website using React.js to showcase projects, skills, and contact information. Implemented clean UI design and deployed the application on Vercel.",
+      image: "/assets/sudip portfolio ss.png",
+      technologies: ["vite + React js", "Tailwind css", "react icons", "Resend" ,"Express"],
+      githubUrl: "https://github.com/Sudip294/Sudip-portfolio",
+      liveUrl: "https://sudip-portfolio-project.vercel.app/",
+      featured: true
+    },
+    {
+      id: 3,
       title: "TravelBooker",
       description: "A responsive travel booking frontend application built using React.js. The project focuses on creating reusable components, clean UI design, and smooth user experience. It showcases destination listings and a modern layout, deployed using Vercel. This project helped strengthen my understanding of React component structure and frontend best practices.",
       image: "/assets/travetbooker ss.png",
@@ -108,17 +128,17 @@ export const portfolioData = {
       featured: true
     },
     {
-      id: 2,
+      id: 4,
       title: "CalcMaster",
       description: "Developed a responsive web application offering essential tools such as a standardcalculator, BMI index calculator, and age calculator. Built using HTML, CSS, and JavaScript, and deployed on Vercel, the platform ensures a user-friendly and efficient experience across devices.",
       image: "/assets/calcmaster ss.jpg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["HTML", "CSS", "JavaScript", "BootStrap","PWA"],
       githubUrl: " https://github.com/Sudip294/CalcMaster-Project",
       liveUrl: " https://calc-master-project.vercel.app/",
-      featured: true
+      featured: false
     },
     {
-      id: 3,
+      id: 5,
       title: "EatsExpress",
       description: "Developed a comprehensive website for EatsExpress, a modern food delivery service in Mumbai, featuring a diverse range of culinary options and a responsive user interface.",
       image: "/assets/eatsexpress.png",

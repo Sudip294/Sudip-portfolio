@@ -72,7 +72,7 @@ export function Hero() {
               <Button variant="outline" className="group">
                 <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 {/* EDIT THIS: Resume download link */}
-                <a href="/assets/sudip resume2.pdf" download>
+                <a href="/assets/sudip resume3.pdf" download>
                   {portfolioData.hero.cta.secondary}
                 </a>
               </Button>

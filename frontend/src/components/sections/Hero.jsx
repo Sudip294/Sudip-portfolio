@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Download, Mail, Github, ArrowDown } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { portfolioData } from '../../data/portfolio';
+import { useState } from 'react';
+
 
 export function Hero() {
   // DO NOT CHANGE: Animation variants
@@ -25,6 +27,8 @@ export function Hero() {
     },
   };
 
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   // DO NOT CHANGE: Scroll to next section
   const scrollToAbout = () => {
     document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
@@ -44,31 +48,31 @@ export function Hero() {
             <motion.div variants={itemVariants} className="mb-4">
               <span className="text-primary font-medium text-lg">Hello, I'm</span>
             </motion.div>
-            
+
             <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold mb-6">
               {/* EDIT THIS: Your name */}
               {portfolioData.personal.name}
               <br />
               <span className="text-primary">{portfolioData.personal.title}</span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               variants={itemVariants}
               className="text-xl text-muted-foreground mb-8 leading-relaxed"
             >
               {/* EDIT THIS: Your headline */}
               {portfolioData.hero.subheadline}
             </motion.p>
-            
+
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-8">
-              <Button 
+              <Button
                 onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group"
               >
                 {portfolioData.hero.cta.primary}
                 <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
               </Button>
-              
+
               <Button variant="outline" className="group">
                 <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 {/* EDIT THIS: Resume download link */}
@@ -76,8 +80,8 @@ export function Hero() {
                   {portfolioData.hero.cta.secondary}
                 </a>
               </Button>
-              
-              <Button 
+
+              <Button
                 variant="ghost"
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group"
@@ -110,15 +114,23 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              {/* EDIT THIS: Replace with your profile image */}
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-primary/60 p-2">
+              <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-primary/60 p-2 relative overflow-hidden">
+
+                {/* Skeleton Loader */}
+                {!imageLoaded && (
+                  <div className="absolute inset-2 rounded-full bg-muted animate-pulse" />
+                )}
+
+                {/* Profile Image */}
                 <img
-                  src= {portfolioData.personal.profileImage}
+                  src={portfolioData.personal.profileImage}
                   alt={portfolioData.personal.name}
-                  className="w-full h-full object-cover rounded-full"
+                  onLoad={() => setImageLoaded(true)}
+                  className={`w-full h-full object-cover rounded-full transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'
+                    }`}
                 />
               </div>
-              
+
               {/* Floating decorations */}
               <motion.div
                 className="absolute -top-4 -right-4 w-20 h-20 bg-primary/20 rounded-full blur-xl"
@@ -137,7 +149,7 @@ export function Hero() {
         {/* Scroll indicator */}
         <motion.button
           onClick={scrollToAbout}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+          className="relative bottom-8 transform -translate-x-1/2 animate-bounce"
           variants={itemVariants}
         >
           <ArrowDown className="h-6 w-6 text-muted-foreground" />

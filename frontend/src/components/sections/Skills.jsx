@@ -2,6 +2,22 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
 import { portfolioData } from '../../data/portfolio';
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiVite,
+  SiTailwindcss,
+  SiBootstrap,
+  SiFramer,
+  SiGithub,
+  SiNodedotjs,
+  SiMongodb,
+  SiExpress,
+  SiShadcnui,
+} from 'react-icons/si';
+
 
 export function Skills() {
   // DO NOT CHANGE: Animation variants
@@ -34,6 +50,40 @@ export function Skills() {
     acc[skill.category].push(skill);
     return acc;
   }, {});
+
+  const skillIcons = {
+    HTML5: SiHtml5,
+    CSS3: SiCss3,
+    JavaScript: SiJavascript,
+    React: SiReact,
+    Vite: SiVite,
+    Tailwind: SiTailwindcss,
+    Bootstrap: SiBootstrap,
+    Framer: SiFramer,
+    Git: SiGithub,
+    Node: SiNodedotjs,
+    MERN: SiMongodb, // or custom MERN icon
+    Express: SiExpress,
+    shadcn: SiShadcnui,
+  };
+
+  const getSkillKey = (name) => {
+    if (name.includes('HTML')) return 'HTML5';
+    if (name.includes('CSS')) return 'CSS3';
+    if (name.includes('JavaScript')) return 'JavaScript';
+    if (name.includes('React')) return 'React';
+    if (name.includes('Vite')) return 'Vite';
+    if (name.includes('Tailwind')) return 'Tailwind';
+    if (name.includes('Bootstrap')) return 'Bootstrap';
+    if (name.includes('Framer')) return 'Framer';
+    if (name.includes('Git')) return 'Git';
+    if (name.includes('Node')) return 'Node';
+    if (name.includes('MERN')) return 'MERN';
+    if (name.includes('shadcn')) return 'shadcn';
+    return null;
+  };
+
+
 
   return (
     <section id="skills" className="py-20 px-4">
@@ -95,20 +145,33 @@ export function Skills() {
         <motion.div variants={itemVariants} className="mt-12">
           <h3 className="text-2xl font-semibold text-center mb-8">Quick Overview</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {portfolioData.skills.map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                className="group p-4 rounded-lg bg-accent/50 hover:bg-accent transition-colors text-center"
-                whileHover={{ scale: 1.05, y: -5 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
-                <div className="font-medium text-sm">{skill.name.split(' ')[0]}</div>
-                <div className="text-xs text-muted-foreground mt-1">{skill.level}%</div>
-              </motion.div>
-            ))}
+            {portfolioData.skills.map((skill, index) => {
+              const Icon = skillIcons[getSkillKey(skill.name)];
+
+              return (
+                <motion.div
+                  key={skill.name}
+                  className="group p-4 rounded-lg bg-accent/50 hover:bg-accent transition-colors text-center flex flex-col items-center gap-2"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                >
+                  {Icon && (
+                    <Icon className="text-3xl text-primary group-hover:scale-110 transition-transform" />
+                  )}
+
+                  <div className="font-medium text-sm">
+                    {skill.name.replace(/\(.*?\)/g, '').trim()}
+                  </div>
+
+                  <div className="text-xs text-muted-foreground">
+                    {skill.level}%
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </motion.div>

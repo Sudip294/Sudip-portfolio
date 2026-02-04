@@ -42,9 +42,10 @@ export function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled || isOpen
+          ? 'bg-background/80 backdrop-blur-md shadow-sm'
+          : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -69,7 +70,7 @@ export function Navbar() {
                 {item.label}
               </motion.button>
             ))}
-            
+
             {/* DO NOT CHANGE: Theme toggle button */}
             <motion.button
               onClick={toggleTheme}
@@ -92,7 +93,7 @@ export function Navbar() {
             >
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
             </motion.button>
-            
+
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-md hover:bg-accent transition-colors"

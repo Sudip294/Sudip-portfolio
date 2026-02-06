@@ -14,7 +14,6 @@ import {
   SiGithub,
   SiNodedotjs,
   SiMongodb,
-  SiExpress,
   SiShadcnui,
 } from 'react-icons/si';
 
@@ -63,17 +62,16 @@ export function Skills() {
     Git: SiGithub,
     Node: SiNodedotjs,
     MERN: SiMongodb, // or custom MERN icon
-    Express: SiExpress,
     shadcn: SiShadcnui,
   };
 
   const getSkillKey = (name) => {
+    if (name.includes('Tailwind')) return 'Tailwind';
     if (name.includes('HTML')) return 'HTML5';
     if (name.includes('CSS')) return 'CSS3';
     if (name.includes('JavaScript')) return 'JavaScript';
     if (name.includes('React')) return 'React';
     if (name.includes('Vite')) return 'Vite';
-    if (name.includes('Tailwind')) return 'Tailwind';
     if (name.includes('Bootstrap')) return 'Bootstrap';
     if (name.includes('Framer')) return 'Framer';
     if (name.includes('Git')) return 'Git';

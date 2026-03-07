@@ -15,7 +15,7 @@ export const portfolioData = {
   // EDIT THIS: Your social links
   social: {
     github: "https://github.com/Sudip294",
-    linkedin: "https://www.linkedin.com/in/sudip-bag28/",
+    linkedin: "https://www.linkedin.com/in/sudip-bag2806/",
     Instagram: "https://www.instagram.com/sudip_9955",
   },
 

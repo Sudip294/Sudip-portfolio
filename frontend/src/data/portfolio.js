@@ -5,7 +5,7 @@ export const portfolioData = {
   // EDIT THIS: Your personal information
   personal: {
     name: "Sudip Bag",
-    title: "React JS Developer",
+    title: "Frontend Developer",
     email: "dipalbag123@gmail.com",
     phone: "+91 8668924123",
     location: "Nallasopara,Maharashtra,IN",

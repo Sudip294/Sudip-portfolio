@@ -64,14 +64,14 @@ export const portfolioData = {
       degree: "Bachelor of Computer Applications (BCA)",
       institution: "Tilak Maharashtra University, Pune",
       year: "2021 - 2024",
-      grade:"CGPA : 7.72",
+      grade: "CGPA : 7.72",
       description: "Focused on computer applications, programming fundamentals, web development, and software development."
     },
     {
       degree: "HSC (Class XII)",
       institution: "Maharashtra State Board of Secondary & Higher Secondary Education, Pune",
       year: "2019 - 2021",
-      grade:"Grade : 84.50%",
+      grade: "Grade : 84.50%",
       description: "Completed Higher Secondary education in Commerce with Information Technology, focusing on business fundamentals and basic computer applications"
     }
   ],
@@ -79,13 +79,13 @@ export const portfolioData = {
   // EDIT THIS: Your experience
   experience: [
     {
-  title: "Fresher Frontend Developer (Self-Learning)",
-  // company: "Personal Projects",
-  period: "Jun 2024 - Present",
-  description: "Developed multiple frontend projects using React.js, focusing on reusable components, responsive design, and clean UI implementation.",
-  technologies: ["React", "JavaScript", "Tailwind CSS", "Bootstrap", "Git"]
-}
-,
+      title: "Fresher Frontend Developer (Self-Learning)",
+      // company: "Personal Projects",
+      period: "Jun 2024 - Present",
+      description: "Developed multiple frontend projects using React.js, focusing on reusable components, responsive design, and clean UI implementation.",
+      technologies: ["React", "JavaScript", "Tailwind CSS", "Bootstrap", "Git"]
+    }
+    ,
     // {
     //   title: "Freelance Web Developer",
     //   company: "Self-Employed",
@@ -102,7 +102,7 @@ export const portfolioData = {
       title: "CookMate",
       description: "Developed CookMate a MERN-stack recipe platform featuring JWT-secured user accounts and real-time API integration. Solved complex cross-origin authentication challenges and implemented a localized storage fallback for distributed hosting on Vercel and Render. Features high-performance recipe searching, search history, and a modern, animated user interface",
       image: "/assets/cookmate ss.png",
-      technologies: ["vite + React js", "Tailwind css", "react icons", "react-hot-toast","Motion Dev","Axios","Basic MERN CRUD","Jwt","Bycrypt","Cors","Resend"],
+      technologies: ["vite + React js", "Tailwind css", "react icons", "react-hot-toast", "Framer Motion", "Axios", "Basic MERN CRUD", "Jwt", "Bycrypt", "Cors", "Resend"],
       githubUrl: "https://github.com/Sudip294/CookMate",
       liveUrl: "https://cookmate-project.vercel.app",
       featured: true
@@ -112,17 +112,17 @@ export const portfolioData = {
       title: "NodeKit",
       description: "Developed a secure Node.js and MongoDB backend for a privacy-centric todo application. Implemented JWT authentication, bcrypt hashing, and a unique secondary privacy lock system for sensitive tasks, alongside integrated email OTP services via Resend.",
       image: "/assets/nodekit ss.png",
-      technologies: ["vite + React js", "Tailwind css", "react icons", "react-hot-toast" ,"PWA","Basic MERN CRUD","Resend"],
+      technologies: ["vite + React js", "Tailwind css", "react icons", "react-hot-toast", "PWA", "Basic MERN CRUD", "Resend"],
       githubUrl: "https://github.com/Sudip294/Nodekit",
       liveUrl: "https://nodekit.vercel.app/",
       featured: true
     },
-     {
+    {
       id: 3,
       title: "Sudip Portfolio",
       description: "Developed a responsive personal portfolio website using React.js to showcase projects, skills, and contact information. Implemented clean UI design and deployed the application on Vercel.",
       image: "/assets/sudip portfolio ss.png",
-      technologies: ["vite + React js", "Tailwind css", "react icons", "Resend" ,"Express"],
+      technologies: ["vite + React js", "Tailwind css", "react icons", "Resend", "Express"],
       githubUrl: "https://github.com/Sudip294/Sudip-portfolio",
       liveUrl: "https://sudip-portfolio-project.vercel.app/",
       featured: true
@@ -132,23 +132,33 @@ export const portfolioData = {
       title: "TravelBooker",
       description: "A responsive travel booking frontend application built using React.js. The project focuses on creating reusable components, clean UI design, and smooth user experience. It showcases destination listings and a modern layout, deployed using Vercel. This project helped strengthen my understanding of React component structure and frontend best practices.",
       image: "/assets/travetbooker ss.png",
-      technologies: ["vite + React js", "Bootstrap", "Chart.js", "react-hot-toast" ,"PWA"],
+      technologies: ["vite + React js", "Bootstrap", "Chart.js", "react-hot-toast", "PWA"],
       githubUrl: "https://github.com/Sudip294/travelBooker-project",
       liveUrl: "https://travel-booker-project.vercel.app/",
       featured: true
     },
     {
       id: 5,
+      title: "DevLabs",
+      description: "A browser-based hardware diagnostics suite built with React 19, Vite & Tailwind CSS 4. Features 8 interactive tests (keyboard latency, mouse CPS, screen FPS, media/network/sensors) with dark mode glassmorphism UI. Showcases React Router, Framer Motion & Web APIs.",
+      image: "/assets/devlabs ss.png",
+      technologies: ["vite + React js", "Tailwind Css", "Framer Motion", "react-hot-toast", "react icons", "Web APIs"],
+      githubUrl: "https://github.com/Sudip294/DevLabs",
+      liveUrl: "https://devlabs-project.vercel.app/",
+      featured: true
+    },
+    {
+      id: 6,
       title: "CalcMaster",
       description: "Developed a responsive web application offering essential tools such as a standardcalculator, BMI index calculator, and age calculator. Built using HTML, CSS, and JavaScript, and deployed on Vercel, the platform ensures a user-friendly and efficient experience across devices.",
       image: "/assets/calcmaster ss.jpg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["HTML", "CSS", "JavaScript", "BootStrap","PWA"],
+      technologies: ["HTML", "CSS", "JavaScript", "BootStrap", "PWA"],
       githubUrl: " https://github.com/Sudip294/CalcMaster-Project",
       liveUrl: " https://calc-master-project.vercel.app/",
       featured: false
     },
     {
-      id: 6,
+      id: 7,
       title: "EatsExpress",
       description: "Developed a comprehensive website for EatsExpress, a modern food delivery service in Mumbai, featuring a diverse range of culinary options and a responsive user interface.",
       image: "/assets/eatsexpress.png",

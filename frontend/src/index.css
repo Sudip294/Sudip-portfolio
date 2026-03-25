@@ -87,3 +87,16 @@ html {
 .focus-visible {
   @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
 }
+
+/* Mobile-visible fallback for motion-hidden elements */
+
+@media (max-width: 640px) {
+
+  #skills,
+  #projects,
+  #skills * ,
+  #projects * {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}

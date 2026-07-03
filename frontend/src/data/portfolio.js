@@ -97,8 +97,20 @@ export const portfolioData = {
 
   // EDIT THIS: Your projects
   projects: [
+
     {
       id: 1,
+      title: "NestSync Portal",
+      description: "Built NestSync, a full-stack Society Management PWA for Indian co-operative housing societies. Architected a dual-role system with separate Admin and Resident dashboards secured via JWT middleware. Implemented real-time complaint tracking and notice broadcasting using Socket.io for instant cross-client updates without page refreshes. Integrated a custom Google Translate layer with 13 official Indian languages, overriding the default widget UI with a branded dropdown. Engineered Web Push Notifications compatible across all devices and browsers. Features maintenance billing per-flat or bulk generation, profile management with cascade data cleanup on account deletion, and full society customisation including logo upload.",
+      image: "/assets/nestsync ss.png",
+      technologies: ["Vite + React.js", "Tailwind CSS v3", "Framer Motion", "Socket.io", "Axios", "React Router v7", "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcrypt", "Helmet", "Web-Push", "Resend API", "PWA"],
+      githubUrl: "https://github.com/Sudip294/nestsync",
+      liveUrl: "https://nestsync-portal.vercel.app",
+      featured: true
+    },
+
+    {
+      id:2,
       title: "RailPulse",
       description: "Engineered RailPulse, a real-time Mumbai suburban train tracking platform. Implemented low-latency global community chat using Socket.io and high-performance React state management for optimistic UI updates. Solved complex production CSS rendering issues by implementing custom glassmorphism layers and cross-browser backdrop filter patches. Features real-time status reporting, dark-mode optimized logistics, and PWA support for on-the-go commuters.",
       image: "/assets/railpulse ss.png",
@@ -109,7 +121,7 @@ export const portfolioData = {
     },
 
     {
-      id: 2,
+      id: 3,
       title: "CookMate",
       description: "Developed CookMate a MERN-stack recipe platform featuring JWT-secured user accounts and real-time API integration. Solved complex cross-origin authentication challenges and implemented a localized storage fallback for distributed hosting on Vercel and Render. Features high-performance recipe searching, search history, and a modern, animated user interface",
       image: "/assets/cookmate ss.png",
@@ -119,7 +131,7 @@ export const portfolioData = {
       featured: true
     },
     {
-      id: 3,
+      id: 4,
       title: "Sudip Portfolio",
       description: "Developed a responsive personal portfolio website using React.js to showcase projects, skills, and contact information. Implemented clean UI design and deployed the application on Vercel.",
       image: "/assets/sudip portfolio ss.png",
@@ -129,7 +141,7 @@ export const portfolioData = {
       featured: true
     },
     {
-      id: 4,
+      id: 5,
       title: "TravelBooker",
       description: "A responsive travel booking frontend application built using React.js. The project focuses on creating reusable components, clean UI design, and smooth user experience. It showcases destination listings and a modern layout, deployed using Vercel. This project helped strengthen my understanding of React component structure and frontend best practices.",
       image: "/assets/travetbooker ss.png",
@@ -139,7 +151,7 @@ export const portfolioData = {
       featured: true
     },
     {
-      id: 5,
+      id: 6,
       title: "NodeKit",
       description: "Developed a secure Node.js and MongoDB backend for a privacy-centric todo application. Implemented JWT authentication, bcrypt hashing, and a unique secondary privacy lock system for sensitive tasks, alongside integrated email OTP services via Resend.",
       image: "/assets/nodekit ss.png",
@@ -149,7 +161,7 @@ export const portfolioData = {
       featured: true
     },
     {
-      id: 6,
+      id: 7,
       title: "DevLabs",
       description: "A browser-based hardware diagnostics suite built with React 19, Vite & Tailwind CSS 4. Features 8 interactive tests (keyboard latency, mouse CPS, screen FPS, media/network/sensors) with dark mode glassmorphism UI. Showcases React Router, Framer Motion & Web APIs.",
       image: "/assets/devlabs ss.png",
@@ -159,7 +171,7 @@ export const portfolioData = {
       featured: false
     },
     {
-      id: 7,
+      id: 8,
       title: "CalcMaster",
       description: "Developed a responsive web application offering essential tools such as a standardcalculator, BMI index calculator, and age calculator. Built using HTML, CSS, and JavaScript, and deployed on Vercel, the platform ensures a user-friendly and efficient experience across devices.",
       image: "/assets/calcmaster ss.jpg?auto=compress&cs=tinysrgb&w=800",
@@ -169,7 +181,7 @@ export const portfolioData = {
       featured: false
     },
     {
-      id: 8,
+      id: 9,
       title: "EatsExpress",
       description: "Developed a comprehensive website for EatsExpress, a modern food delivery service in Mumbai, featuring a diverse range of culinary options and a responsive user interface.",
       image: "/assets/eatsexpress.png",

@@ -105,7 +105,7 @@ export const portfolioData = {
       image: "/assets/nestsync ss.png",
       technologies: ["Vite + React.js", "Tailwind CSS v3", "Framer Motion", "Socket.io", "Axios", "React Router v7", "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcrypt", "Helmet", "Web-Push", "Resend API", "PWA"],
       githubUrl: "https://github.com/Sudip294/nestsync",
-      liveUrl: "https://nestsync-portal-project.vercel.app",
+      liveUrl: "https://nestsync-portal.vercel.app",
       featured: true
     },
 

@@ -72,7 +72,7 @@ export const portfolioData = {
       institution: "Maharashtra State Board of Secondary & Higher Secondary Education, Pune",
       year: "2019 - 2021",
       grade: "Grade : 84.50%",
-      description: "Completed Higher Secondary education in Commerce with Information Technology, focusing on business fundamentals and basic computer applications"
+      description: "Completed Higher Secondary education in Commerce with Information Technology, focusing on business fundamentals and basic computer applications."
     }
   ],
 

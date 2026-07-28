@@ -123,7 +123,7 @@ export const portfolioData = {
     {
       id: 3,
       title: "CookMate",
-      description: "Developed CookMate a MERN-stack recipe platform featuring JWT-secured user accounts and real-time API integration. Solved complex cross-origin authentication challenges and implemented a localized storage fallback for distributed hosting on Vercel and Render. Features high-performance recipe searching, search history, and a modern, animated user interface",
+      description: "Developed CookMate a MERN-stack recipe platform featuring JWT-secured user accounts and real-time API integration. Solved complex cross-origin authentication challenges and implemented a localized storage fallback for distributed hosting on Vercel and Render. Features high-performance recipe searching, search history, and a modern, animated user interface.",
       image: "/assets/cookmate ss.png",
       technologies: ["vite + React js", "Tailwind css", "react icons", "react-hot-toast", "Framer Motion", "Axios", "Basic MERN CRUD", "Jwt", "Bycrypt", "Cors", "Resend"],
       githubUrl: "https://github.com/Sudip294/CookMate",

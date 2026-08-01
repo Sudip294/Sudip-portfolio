@@ -114,7 +114,7 @@ export const portfolioData = {
       title: "RailPulse",
       description: "Engineered RailPulse, a real-time Mumbai suburban train tracking platform. Implemented low-latency global community chat using Socket.io and high-performance React state management for optimistic UI updates. Solved complex production CSS rendering issues by implementing custom glassmorphism layers and cross-browser backdrop filter patches. Features real-time status reporting, dark-mode optimized logistics, and PWA support for on-the-go commuters.",
       image: "/assets/railpulse ss.png",
-      technologies: ["Vite + React.js", "Tailwind CSS 4", "Socket.io", "Framer Motion", "Lucide React", "React-hot-toast", "Node.js", "Express", "Mongoose", "Jwt", "bcrypt", "PWA"],
+      technologies: ["Vite + React.js", "Tailwind CSS 4", "Socket.io", "Framer Motion", "Lucide React", "React-hot-toast", "Axios", "Node.js", "Express", "Mongoose", "Jwt", "bcrypt", "PWA"],
       githubUrl: "https://github.com/Sudip294/RailPulse",
       liveUrl: "https://rail-pulse-project.vercel.app",
       featured: true

@@ -83,7 +83,7 @@ export const portfolioData = {
       // company: "Personal Projects",
       period: "Jun 2024 - Present",
       description: "Developed multiple frontend projects using React.js, focusing on reusable components, responsive design, and clean UI implementation.",
-      technologies: ["React Js", "Vite", "JavaScript", "Tailwind CSS", "Bootstrap", "Axios", "Node js", "Git", "GitHub"]
+      technologies: ["React Js", "Vite", "JavaScript", "Tailwind CSS", "Bootstrap", "Axios", "Node js", "Git", "GitHub", "Postman"]
     }
     ,
     // {

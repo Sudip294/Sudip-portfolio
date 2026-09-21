@@ -103,7 +103,7 @@ export const portfolioData = {
       title: "NestSync Portal",
       description: "Built NestSync, a full-stack Society Management PWA for Indian co-operative housing societies. Architected a dual-role system with separate Admin and Resident dashboards secured via JWT middleware. Implemented real-time complaint tracking and notice broadcasting using Socket.io for instant cross-client updates without page refreshes. Integrated a custom Google Translate layer with 13 official Indian languages, overriding the default widget UI with a branded dropdown. Engineered Web Push Notifications compatible across all devices and browsers. Features maintenance billing per-flat or bulk generation, profile management with cascade data cleanup on account deletion, and full society customisation including logo upload.",
       image: "/assets/nestsync ss.png",
-      technologies: ["Vite + React.js", "Tailwind CSS v3", "Framer Motion", "Socket.io", "Axios", "React Router v7", "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcrypt", "Cors", "Helmet", "Web-Push", "Resend API", "PWA"],
+      technologies: ["Vite + React.js", "Tailwind CSS v3", "Framer Motion", "Socket.io", "Axios", "React Router v7", "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcrypt", "Cors", "Helmet", "Web-Push", "G translate", "Resend API", "PWA"],
       githubUrl: "https://github.com/Sudip294/nestsync",
       liveUrl: "https://nestsync-portal.vercel.app",
       featured: true
